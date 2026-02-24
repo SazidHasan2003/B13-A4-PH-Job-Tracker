@@ -88,5 +88,12 @@ function filterJobs(type) {
     availableCount.innerText = visibleCount + " of " + total + " jobs";
   }
 
+  // ===== EMPTY STATE LOGIC =====
+  if (visibleCount === 0) {
+    emptyState.classList.remove("hidden");
+  } else {
+    emptyState.classList.add("hidden");
+  }
+
   updateTabStyle(type);
 }
