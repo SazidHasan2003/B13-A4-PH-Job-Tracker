@@ -1,6 +1,6 @@
 # 1. What is the difference between getElementById, getElementsByClassName, querySelector, and querySelectorAll?
 
-Ans:
+**Ans:**
 
 | getElementById()                         | getElementsByClassName()                              | querySelector()                                              | querySelectorAll()                                                    |
 | ---------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------- |
@@ -13,7 +13,7 @@ Ans:
 
 # 2. How do you create and insert a new element into the DOM?
 
-Ans: to create and insert a new element into the DOM,
+**Ans:** to create and insert a new element into the DOM,
 
 1. First create the element by document.createElement (“element name”)
 2. Add content, attribute or element
@@ -31,7 +31,7 @@ document.body.appendChild(newDiv);
 
 # 3. What is Event Bubbling? And how does it work?
 
-Ans: Event bubbling in Javascript is a mechanism where an event triggered on a child element propagates upward through its ancestors in the DOM. It allows parent elements to respond to events triggered by their child elements.
+**Ans:** Event bubbling in Javascript is a mechanism where an event triggered on a child element propagates upward through its ancestors in the DOM. It allows parent elements to respond to events triggered by their child elements.
 
 1. It starts when the event triggers on a element or child or parent.
 2. The event moves up to the parent element to find triggered event
@@ -42,7 +42,7 @@ Ans: Event bubbling in Javascript is a mechanism where an event triggered on a c
 
 # 4. What is Event Delegation in JavaScript? Why is it useful?
 
-Ans: Event delegation is a technique in JavaScript where a parent element handles events for its child elements, even if the children are added dynamically after the page loads. This works because events in JavaScript bubble up from the target element to its ancestors.
+**Ans:** Event delegation is a technique in JavaScript where a parent element handles events for its child elements, even if the children are added dynamically after the page loads. This works because events in JavaScript bubble up from the target element to its ancestors.
 
 Why is it useful:
 
@@ -55,7 +55,7 @@ Why is it useful:
 
 # 5. What is the difference between preventDefault() and stopPropagation() methods?
 
-Ans:
+**Ans:**
 
 | preventDefault()                                                              | stopPropagation()                                                  |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------ |
