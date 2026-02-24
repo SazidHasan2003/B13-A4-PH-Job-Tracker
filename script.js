@@ -176,4 +176,12 @@ for (let i = 0; i < jobCards.length; i++) {
     updateCounts();
     filterJobs(currentTab);
   });
+
+  deleteBtn.addEventListener("click", function () {
+    jobCards[i].setAttribute("data-status", "deleted");
+    jobCards[i].style.display = "none";
+
+    updateCounts();
+    filterJobs(currentTab);
+  });
 }
