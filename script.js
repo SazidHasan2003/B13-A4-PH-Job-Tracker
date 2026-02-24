@@ -8,6 +8,7 @@ const interviewCount = document.getElementById("interviewCount");
 const rejectedCount = document.getElementById("rejectedCount");
 const totalCount = document.getElementById("totalCount");
 const availableCount = document.getElementById("availableCount");
+let currentTab = "all"; // default tab
 
 // ================= UPDATE COUNTS =================
 function updateCounts() {
@@ -96,4 +97,33 @@ function filterJobs(type) {
   }
 
   updateTabStyle(type);
+}
+
+// ================= TAB active or not active STYLE  =================
+
+function updateTabStyle(activeTab) {
+  const tabs = [allTab, interviewTab, rejectedTab];
+
+  for (let tab of tabs) {
+    //  reset tabs
+    tab.classList.remove("bg-blue-600", "text-white");
+    tab.classList.remove("bg-white");
+    tab.classList.add("bg-white", "text-black");
+  }
+
+  // active tab set
+  if (activeTab === "all") {
+    allTab.classList.remove("bg-white", "text-black");
+    allTab.classList.add("bg-blue-600", "text-white");
+  }
+
+  if (activeTab === "interview") {
+    interviewTab.classList.remove("bg-white", "text-black");
+    interviewTab.classList.add("bg-blue-600", "text-white");
+  }
+
+  if (activeTab === "rejected") {
+    rejectedTab.classList.remove("bg-white", "text-black");
+    rejectedTab.classList.add("bg-blue-600", "text-white");
+  }
 }
