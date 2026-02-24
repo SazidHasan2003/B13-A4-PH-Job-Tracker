@@ -20,9 +20,12 @@ Ans: to create and insert a new element into the DOM,
 3. Use .appendChild(newDiv) insert new element
 
 Example:
+
+```javascript
 const newDiv = document.createElement("div");
 newDiv.innerText = "Hello World";
 document.body.appendChild(newDiv);
+```
 
 ---
 
