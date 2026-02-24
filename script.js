@@ -127,3 +127,53 @@ function updateTabStyle(activeTab) {
     rejectedTab.classList.add("bg-blue-600", "text-white");
   }
 }
+
+// ================= CARD BUTTONS =================
+for (let i = 0; i < jobCards.length; i++) {
+  const interviewBtn = jobCards[i].querySelector(".interview-btn");
+  const rejectedBtn = jobCards[i].querySelector(".rejected-btn");
+  const deleteBtn = jobCards[i].querySelector(".delete-btn");
+  const badge = jobCards[i].querySelector(".status-badge");
+
+  interviewBtn.addEventListener("click", function () {
+    const currentStatus = jobCards[i].getAttribute("data-status");
+
+    if (currentStatus === "interview") {
+      jobCards[i].setAttribute("data-status", "all");
+      badge.innerText = "NOT APPLIED";
+
+      badge.className =
+        "status-badge inline-block mt-2 text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-md";
+    } else {
+      jobCards[i].setAttribute("data-status", "interview");
+      badge.innerText = "Interview";
+
+      badge.className =
+        "status-badge inline-block mt-2 text-xs bg-green-100 text-green-600 border border-green-600 px-3 py-1 rounded-md";
+    }
+
+    updateCounts();
+    filterJobs(currentTab);
+  });
+
+  rejectedBtn.addEventListener("click", function () {
+    const currentStatus = jobCards[i].getAttribute("data-status");
+
+    if (currentStatus === "rejected") {
+      jobCards[i].setAttribute("data-status", "all");
+      badge.innerText = "NOT APPLIED";
+
+      badge.className =
+        "status-badge inline-block mt-2 text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-md";
+    } else {
+      jobCards[i].setAttribute("data-status", "rejected");
+      badge.innerText = "Rejected";
+
+      badge.className =
+        "status-badge inline-block mt-2 text-xs bg-red-100 text-red-600 border border-red-600 px-3 py-1 rounded-md";
+    }
+
+    updateCounts();
+    filterJobs(currentTab);
+  });
+}
