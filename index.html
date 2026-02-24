@@ -17,7 +17,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
-  <body>
+  <body class="bg-gray-100">
     <!-- Job header section -->
 
     <div class="max-w-6xl mx-auto p-6">
@@ -25,7 +25,7 @@
         Job Application Tracker
       </h1>
 
-      <!-- summary section -->
+      <!-- Summary section -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <div class="bg-white p-6 rounded-lg shadow-sm">
           <p class="text-gray-500 text-sm">Total</p>
@@ -48,6 +48,33 @@
             0
           </h2>
         </div>
+      </div>
+
+      <!-- Filter jods -->
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-semibold text-gray-700">Available Jobs</h2>
+        <span id="availableCount" class="text-sm text-gray-500">8 jobs</span>
+      </div>
+
+      <div class="flex gap-3 mb-6">
+        <button
+          id="allTab"
+          class="px-4 py-2 bg-blue-600 text-white rounded-md text-sm"
+        >
+          All
+        </button>
+        <button
+          id="interviewTab"
+          class="px-4 py-2 bg-white border rounded-md text-sm"
+        >
+          Interview
+        </button>
+        <button
+          id="rejectedTab"
+          class="px-4 py-2 bg-white border rounded-md text-sm"
+        >
+          Rejected
+        </button>
       </div>
     </div>
 
