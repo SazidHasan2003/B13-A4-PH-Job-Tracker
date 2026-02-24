@@ -185,3 +185,20 @@ for (let i = 0; i < jobCards.length; i++) {
     filterJobs(currentTab);
   });
 }
+
+// ================= TAB CLICK =================
+allTab.addEventListener("click", function () {
+  filterJobs("all");
+});
+
+interviewTab.addEventListener("click", function () {
+  filterJobs("interview");
+});
+
+rejectedTab.addEventListener("click", function () {
+  filterJobs("rejected");
+});
+
+// ================= INITIAL LOAD =================
+updateCounts();
+filterJobs("all");
